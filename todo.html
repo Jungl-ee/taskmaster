@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="todo.css">
+
+    <title> TaskMaster </title>
+</head>
+
+<body>
+    <h1 class="logo"> TaskMaster </h1>
+
+    <div class="main">
+        <form class="add-task-row" onsubmit="addTodo()">
+            <button type="submit" class="create-button"></button>
+            <input id="input-task" type="text" placeholder="Add a task" required>
+            <input id="date" type="date">
+        </form>
+
+        <div id="todo-list"></div>
+    </div>
+
+    <script src="todo.js"></script>
+</body>
+
+</html>

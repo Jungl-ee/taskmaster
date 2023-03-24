@@ -1,0 +1,169 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #1c7ad7;
+    user-select: none;
+}
+
+.logo {
+    font-size: 50px;
+    text-align: center;
+    color: white;
+}
+
+@media (max-height: 500px) {
+    .logo {
+        display: none;
+    }
+
+    .main {
+        margin: 20px;
+    }
+
+    .todos {
+        height: 55vh;
+    }
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.add-task-row {
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+    min-width: 400px;
+    gap: 20px;
+    max-width: 800px;
+    background-color: white;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 24px;
+}
+
+.create-button {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    background-image: url(assets/images.png);
+    background-size: cover;
+    border: none;
+    border-radius: 50%;
+}
+
+.create-button:hover {
+    animation: pulse 0.8s ease-out;
+    box-shadow: 0 0 0 0.5em transparent;
+}
+
+@keyframes pulse {
+    0% { 
+        box-shadow: 0 0 0 0 #00ABE7;
+    }
+}
+
+#input-task {
+    outline: none;
+    box-sizing: border-box;
+    font-size: 18px;
+    height: 40px;
+    flex: 1;
+    border: none;
+    padding: 4px 16px;
+    transition: 0.1s;
+}
+
+#input-task:focus,
+#input-task:hover {
+    padding-top: 0;
+    border-bottom: 4px solid;
+    border-image: linear-gradient(to right, #9bf8f4, #6f7bf7);
+    border-image-slice: 1;
+}
+
+input[type="date"] {
+    background-color: #0080ff;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    height: 25px;
+    width: 25px;
+    background-color: lightgrey;
+    cursor: pointer;
+    border-radius: 2px;
+    content: '-';
+}
+
+input[type="checkbox"]:hover {
+    background-color: gray;
+}
+
+input[type="checkbox"]:active {
+    animation: pulse 0.2s ease-out;
+    box-shadow: 0 0 0 0.5em transparent;
+}
+
+input[type="checkbox"]:checked {
+    background-color: greenyellow;
+}
+
+#todo-list {
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    background-color: #FFFBFC;
+    padding: 10px 16px;
+    border-radius: 8px;
+    width: 75%;
+    min-width: 400px;
+    max-width: 700px;
+    overflow-y: auto;
+    min-height: 100px;
+    max-height: 450px;
+}
+
+#todo-list div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+    border-bottom: 1px solid lightgrey;
+    box-sizing: border-box;
+}
+
+#todo-list div:hover {
+    background-color: rgb(245, 245, 245);
+}
+
+.todo-list-button {
+    font-size: 16px;
+    background-color: #0080ff;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 10px;
+}
+
+.button-row {
+    border-bottom: none !important;
+    gap: 10px;
+}
+
+.update-todo-input {
+    flex: 0.75;
+    height: 30px;
+    outline: none;
+    padding: 5px 10px;
+    font-size: 16px;
+}
